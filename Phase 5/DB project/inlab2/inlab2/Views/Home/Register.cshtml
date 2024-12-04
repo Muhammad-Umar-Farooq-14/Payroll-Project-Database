@@ -1,0 +1,83 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/scripts/Register.js">
+
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+
+<body style="background-color:ghostwhite">
+    <style>
+        input[type=text] {
+            width: 60%;
+            border: 2px solid gold;
+            border-radius: 4px;
+        }
+        input[type=email] {
+            width: 60%;
+            border: 2px solid gold;
+            border-radius: 4px;
+        }
+        input[type=password] {
+            width: 60%;
+            border: 2px solid gold;
+            border-radius: 4px;
+        }
+        input[type=date] {
+            width: 40%;
+            border: 2px solid gold;
+            border-radius: 4px;
+        }
+        input[type=submit] {
+            width: 30%;
+            border: 2px solid gold;
+            border-radius: 4px;
+        }
+    </style>
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+    <div style="text-decoration-style:solid; font-size:xx-large; color:white; text-align:center; background-color:black; padding-top:1%; padding-bottom:1%;"> SALLARY MANAGEMENT </div>
+    <div style=" background-color:mediumblue; font-size:larger; text-shadow:20px; margin-left:30%; margin-top:10%; margin-right:30%; padding-left:10%; padding-top:5%; padding-bottom:5%; text-decoration:solid;border:solid; border-width:thin; border-color:black; text-decoration-style:none; color:white; font-size:small;">
+
+
+        <form method="post" onsubmit="return checkForEmptyFieldsofRegister();" action="../Home/RegisterAction">
+            <label> Name:</label> <br />
+            <input name="Name" type="text" id="nameField" placeholder="i.e Muhammad Noyan Aziz"> </input>
+            <br />
+            <br />
+            <label> Email:</label> <br />
+            <input name="Email" type="email" id="emailField" placeholder="i.e sallary@gmail.com"> </input>
+            <br />
+            <br />
+            <label>Home Address:</label> <br />
+            <input name="homeAddress" type="text" id="addressField" placeholder="i.e 111-B DHA EME, Lahore."> </input>
+            <br />
+            <br />
+            <label>Contact No.:</label> <br />
+            <input name="Contact" type="text" id="contactField" placeholder="i.e 0333-4343777"> </input>
+            <br />
+            <br />
+            <label>Enter Password:</label><br />
+            <input name="Password1" type="password" id="password1Field" placeholder="********"> </input>
+            <br />
+            <br />
+            <label>Confirm Password:</label><br />
+            <input name="Password2" type="password" id="password2Field" placeholder="********"> </input>
+            <br />
+            <br />
+            <label>Date Of Birth:</label> <br />
+            <input name="dateOfBirth" type="date" id="dateField" placeholder="i.e 24/02/2019"> </input>
+            <br />
+            <br />
+            <input type="submit" id="registerButton" value="Register" style="background-color:black; color:white; border-color:darkgrey"> &nbsp;
+            <label id="status" style="color:red; text-shadow:20px;"></label>
+        </form>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/scripts/Register.js">
+
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+</head>
+
+<body style="background-color:ghostwhite">
+    <style>
+        input[type=text] {
+            background-color: lightgray;
+            height: 40px;
+            width: 70%;
+            border-radius: 4px;
+        }
+
+        input[type=email] {
+            background-color: lightgray;
+            height: 40px;
+            width: 70%;
+            border-radius: 4px;
+        }
+
+        input[type=password] {
+            background-color: lightgray;
+            height: 40px;
+            width: 70%;
+            border-radius: 4px;
+        }
+
+        input[type=date] {
+            background-color: lightgray;
+            height: 40px;
+            width: 70%;
+            border-radius: 4px;
+        }
+
+        input[type=submit] {
+            background-color: orange;
+            height: 45px;
+            width: 71%;
+            text-align: center;
+            border: 2px solid orange;
+            border-radius: 4px;
+            color: black;
+        }
+    </style>
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+    <div style="border-style:hidden; border-radius:10px; background-color:dimgray; margin-left:35%; margin-top:8%; margin-right:35%; padding-left:7%; padding-top:3%;  text-decoration:solid;border:solid; border-width:thin; border-color:azure; text-decoration-style:none; text-decoration-color:white; font-size:small;">
+
+
+        <form method="post" onsubmit="return checkForEmptyFieldsofRegister();" action="../Home/EmployeeUpdate">
+
+            <input name="Name" type="text" id="nameField" placeholder="Name" value="@Model.employeeName"> </input>
+
+            <input name="Address" type="text" id="addressField" placeholder="Address" value="@Model.employeeAddress"> </input>
+
+            <input name="email" type="text" id="addressField" value="@Model.email"> </input>
+            <input name="contact" type="text" id="contactField" placeholder="Phone Number" value="@Model.dateOfBirth"> </input>
+
+            <input name="password" type="password" id="passwordField" placeholder="Enter Password" value="@Model.password"> </input>
+
+            <input name="dateOfBirth" type="date" id="dateField" placeholder="Date" value="@Model.dateOfBirth"> </input>
+
+            <input name="payGrade" type="text" id="pgradeField" placeholder="PayGrade" value="@Model.payGrade"> </input>
+            <br />
+            <br />
+            <input type="submit" id="updateButton" value="Update">
+            <label id="status" style="color:red; text-shadow:20px;"></label>
+        </form>
+        <br />
+
+
+    </div>
+</body>
+</html>

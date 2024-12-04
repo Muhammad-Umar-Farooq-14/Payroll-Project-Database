@@ -1,0 +1,33 @@
+﻿
+@using inlab2.Models
+
+@model MedicalAllowance
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MedicalAllowance</title>
+</head>
+<body>
+    <div>
+
+        <table border="1" style="border-color:aqua">
+            <thead><tr><td>EID</td> <td>Category ID</td> <td>Medical ID</td>  </tr></thead>
+
+
+            <tr>
+                <td>@Model.EID</td>
+                <td>@Model.CategoryID </td>
+                <td>@Model.MedicalID</td>
+
+            </tr>
+
+
+        </table>
+
+    </div>
+
+</body>
+</html>
+

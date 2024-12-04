@@ -1,0 +1,36 @@
+﻿@using inlab2.Models
+@model List<User>
+@{
+    ViewBag.Title = "ViewUsers";
+}
+
+<h2>ViewUsers</h2>
+
+    <table border="1" style="border-color:aqua">
+            <thead><tr><td>ID</td> <td>Name</td> <td>Address</td>  <td> Date Of Birth</td> <td> Contact</td> <td> Pay Grade</td> <td> Email</td> </tr></thead>
+
+        @foreach (User u in Model)
+        {
+    <tr>
+        <td>@u.userId</td>
+        <td>@u.employeeName </td>
+        <td>@u.employeeAddress</td>
+        <td>@u.dateOfBirth</td>
+        <td>@u.contact </td>
+        <td>@u.payGrade</td>
+        <td>@u.email</td>
+        <td>
+            @Html.ActionLink("Delete", "EmployeeDelete", "Home", new { email = @u.email }, null)
+        </td>
+        <td>
+            @Html.ActionLink("Insert", "EmpInsert", "Home")
+        </td>
+        <td>
+            @Html.ActionLink("Update", "EmpUpdate", "Home", new { email = @u.email }, null)
+        </td>
+    </tr>
+        }
+
+
+    </table>
+

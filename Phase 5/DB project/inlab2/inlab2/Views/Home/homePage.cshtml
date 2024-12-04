@@ -1,0 +1,39 @@
+﻿
+@using inlab2.Models
+
+@model User
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homePage</title>
+</head>
+<body>
+    <div>
+
+        <table border="1" style="border-color:aqua">
+            <thead><tr><td>ID</td> <td>Name</td> <td>Address</td>  <td> Date Of Birth</td> <td> Contact</td> <td> Pay Grade</td> <td> Email</td> </tr></thead>
+
+
+            <tr>
+                <td>@Model.userId</td>
+                <td>@Model.employeeName </td>
+                <td>@Model.employeeAddress</td>
+                <td>@Model.dateOfBirth</td>
+                <td>@Model.contact </td>
+                <td>@Model.payGrade</td>
+                <td>@Model.email</td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+    @Html.ActionLink("Attendance", "Attendance", "Home", new { email = @Model.email }, null)
+    @Html.ActionLink("Overtime", "Overtime", "Home", new { email = @Model.email }, null)
+     @Html.ActionLink("MedicalAllowance", "MedicalAllowance", "Home", new { email = @Model.email }, null)
+</body>
+</html>
+

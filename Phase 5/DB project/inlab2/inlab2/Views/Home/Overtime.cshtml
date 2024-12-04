@@ -1,0 +1,33 @@
+﻿
+@using inlab2.Models
+
+@model Overtime
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Overtime</title>
+</head>
+<body>
+    <div>
+
+        <table border="1" style="border-color:aqua">
+            <thead><tr><td>EID</td> <td>Status</td> <td>Extra Hours</td>  <td>Total Bonus</td> </tr></thead>
+
+
+            <tr>
+                <td>@Model.EmpId</td>
+                <td>@Model.Status </td>
+                <td>@Model.ExtraHrs</td>
+                <td>@Model.TotalBonus</td>
+            </tr>
+
+
+        </table>
+
+    </div>
+
+</body>
+</html>
+

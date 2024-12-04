@@ -1,0 +1,36 @@
+﻿
+@using inlab2.Models
+
+@model Admin
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>homePage</title>
+</head>
+<body>
+    <div>
+    <a href=@Url.Action("AdminLogout", "Home", new { @email = Session["Adminemail"].ToString()}) class="btn btn-danger">Logout</a>
+        <br />
+        <table border="1" style="border-color:aqua">
+            <thead><tr><td>ID</td> <td>EmailName</td> <td>Name</td>  <td> Contact</td></tr></thead>
+
+
+            <tr>
+                <td>@Model.AdminID</td>
+                <td>@Model.AdminEmail </td>
+                <td>@Model.AdminName</td>
+                <td>@Model.ContactNo</td>
+                
+            </tr>
+
+
+        </table>
+
+    </div>
+
+    <a href=@Url.Action("ViewUsers","Home") class="btn btn-primary">View Employees</a>
+</body>
+</html>
+

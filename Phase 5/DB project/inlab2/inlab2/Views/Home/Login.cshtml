@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/scripts/login.js">
+
+
+/**/</script>
+    <meta name="viewport" content="width=device-width" />
+    <title>login</title>
+</head>
+<body style="background-color:lightgray">
+    <style>
+        input[type=email] {
+            background-color: lightgray;
+            height: 40px;
+            width: 70%;
+            border-radius: 4px;
+        }
+
+        input[type=password] {
+            background-color: lightgray;
+            height: 40px;
+            width: 70%;
+            border-radius: 4px;
+        }
+
+        input[type=submit] {
+            background-color: orange;
+            height: 45px;
+            width: 71%;
+            text-align: center;
+            border: 2px solid orange;
+            border-radius: 4px;
+            color: black;
+        }
+    </style>
+    <!-- inline CSS on div tag;  external CSS on text boxes;-->
+    <div style="border-style:hidden; border-radius:10px; background-color:dimgray; margin-left:35%; margin-top:8%; margin-right:35%; padding-left:7%; padding-top:5%;  text-decoration:solid;border:solid; border-width:thin; border-color:azure; text-decoration-style:none; text-decoration-color:white; font-size:small;">
+
+
+        <form method="post" onsubmit="return checkForEmptyFieldsofLogin();" action="../Home/authetnticateLogin">
+
+            <input name="email" type="email" id="emailField" placeholder="Email"> 
+
+            <input name="password" type="password" id="passwordField" placeholder="Password"> 
+            <br />
+            <br />
+            <input type="submit" id="loginButton" value="Login"> &nbsp;
+            <label id="status" style="color:red; text-shadow:20px;"></label>
+            <label style="color:red; text-shadow:20px;">@Model</label>
+        </form>
+        <br />
+        <a href="../Home/AdminLogin" style=" color:lightsteelblue">Admin LogIn</a>
+        <br />
+        <br />
+        <br />
+    </div>
+</body>
+</html>
